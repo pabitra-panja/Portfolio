@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <style>
+      :root {
+        --accent: #c6a75e;
+      }
       * {
         box-sizing: border-box;
       }
 
       body {
         margin: 0;
-        font-family: Arial, sans-serif;
-        color: #fff;
-        background: radial-gradient(circle at top, #0f2b2e, #050b0d);
+        font-family: "Poppins", sans-serif;
+        color: #000000;
+        background: #efece3;
         overflow-x: hidden;
+        letter-spacing: 0.5px;
       }
 
       /* =======================
@@ -85,16 +89,14 @@
       }
 
       .hero h1 {
-        font-size: clamp(36px, 6vw, 56px);
-        font-weight: 700;
+        font-size: clamp(40px, 6vw, 60px);
+        font-weight: 500;
+        letter-spacing: 2px;
       }
-
       .hero h2 {
-        font-size: clamp(20px, 3vw, 28px);
-        font-weight: 400;
-        opacity: 0.85;
+        font-weight: 300;
+        color: #000000;
       }
-
       /* =======================
    PAGE 2 – ABOUT
 ======================= */
@@ -113,25 +115,32 @@
         gap: 22px;
         flex-wrap: wrap;
       }
-
-      .creator-card {
-        background: rgba(255, 255, 255, 0.06);
-        padding: 16px;
-        border-radius: 14px;
-        width: 160px;
-        text-align: center;
+      .creator-card img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-bottom: 12px;
+        filter: brightness(0.9);
       }
 
-      .creator-card img {
-        width: 60px;
-        height: 60px;
-        object-fit: contain;
-        margin-bottom: 8px;
+      .creator-card {
+        background: #4a70a9;
+        padding: 20px;
+        border-radius: 18px;
+        width: 170px;
+        text-align: center;
+        transition: 0.4s ease;
+      }
+
+      .creator-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px #8fabd4;
       }
 
       .creator-card p {
         font-size: 14px;
         margin: 0;
+        color: #efece3;
       }
       .with {
         font-size: 30px;
@@ -155,9 +164,15 @@
         aspect-ratio: 9 / 16;
         max-width: 220px;
         margin: auto;
-        background: #2a2a2a;
-        border-radius: 16px;
+        background: #151515;
+        border-radius: 20px;
         overflow: hidden;
+        transition: 0.4s ease;
+      }
+
+      .video-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px #8fabd4;
       }
 
       .video-card iframe {
@@ -169,11 +184,11 @@
    FOOTER
 ======================= */
       footer {
-        padding: 30px 8%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 40px 8%;
+        background: #4a70a9;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 14px;
+        color: #000000;
       }
 
       .socials a {
@@ -243,11 +258,6 @@
           <p>3.8k+ Followers</p>
           <p>12.3K+ Subscribers</p>
         </div>
-
-        <!-- <div class="creator-card">
-          <img src="creator-logo.png" alt="" />
-          <p>85K Subscribers</p>
-        </div> -->
       </div>
     </section>
 
